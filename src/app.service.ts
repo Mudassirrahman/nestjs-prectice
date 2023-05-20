@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import {AbstractMethodGoingToFill} from "./abstractChileClass.service"
+import {AbstractMethodGoingToFill} from "./abstractChildClass.service"
+import { Abstract2MethodGoingToFill } from './abstract2ChildClass.service';
 
 
 //
@@ -40,13 +41,16 @@ export class AppService {
   constructor(
     // private readonly dayOne : DayOne ,
     //  private readonly dayTwo: DayTwo ,
-      private readonly abstractMethodGoingToFill : AbstractMethodGoingToFill)
+      private readonly abstractMethodGoingToFill : AbstractMethodGoingToFill,
+      private readonly abstract2MethodGoingToFill : Abstract2MethodGoingToFill
+      )
   {}
   getItemlist() {
 
   // this.dayOne.buyItems();
   // this.dayTwo.buyItems();
   this.abstractMethodGoingToFill.checkEveryTime();
+  this.abstract2MethodGoingToFill.checkEveryTime();
 
 }
 }
